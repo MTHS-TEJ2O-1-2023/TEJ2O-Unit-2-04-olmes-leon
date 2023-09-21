@@ -5,4 +5,18 @@
  * This program ...
 */
 
-basic.showString('Hello, World!')
+let randomNumber: number
+
+basic.clearScreen()
+basic.showIcon(IconNames.Happy)
+
+input.onButtonPressed(Button.A, function () {
+    randomNumber = randint(1, 6)
+    basic.showNumber(randomNumber)
+})
+
+basic.clearScreen()
+
+input.onButtonPressed(Button.B, function() {
+    input.temperature()
+})
